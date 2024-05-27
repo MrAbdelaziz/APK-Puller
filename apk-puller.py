@@ -39,10 +39,9 @@ def pull_apk_files(apk_paths, dest_dir):
 
 def main():
     package_name = input("Enter the package name: ")
-    dest_folder_name = input("Enter the destination folder name: ")
 
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    dest_dir = os.path.join(script_dir, dest_folder_name)
+    dest_dir = os.path.join(script_dir, package_name)
 
     apk_paths = get_apk_paths(package_name)
 
